@@ -1,0 +1,118 @@
+<!-- inventory screen -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inventoryStyle.css" type="text/css">
+    <script src="inventoryScript.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Inventory</title>
+</head>
+
+<body>
+    <br>
+    <header>
+        <strong id="titleStyle">INVENTORY</strong><br>
+        
+        <select id="locations">
+            <option value="" disabled selected>location</option>
+            <option value="fridge">fridge</option>
+            <option value="freezer">freezer</option>
+            <option value="pantry">pantry</option>
+            <option value="counter">counter</option>
+        </select>
+        <button onclick="go()" id="saveList-button">Go!</button>
+    </header> <br>
+
+    <div id="inventory-container">
+        <div id="inventory-list-section">
+            <div class="section-title">
+                <h2> 
+                    <span id="locationTitle">your list</span> 
+                    <span id="item-count">(0)</span>
+                </h2>
+            </div>
+            <div class="inventory-buttons">
+                <select id="filter">
+                    <option value="" disabled selected>filter</option>
+                    <option value="full list">full list</option>
+                    <option value="alphabetical">alphabetical</option>
+                    <option value="fruits">fruits</option>
+                    <option value="vegetables">vegetables</option>
+                    <option value="grains">grains</option> 
+                    <option value="meat">meat</option>
+                    <option value="poultry">poultry</option>
+                    <option value="seafood">seafood</option>
+                    <option value="nuts/seeds">nuts/seeds</option>
+                    <option value="dairy">dairy</option>
+                    <option value="herbs/spices">herbs/spices</option>
+                    <option value="beverages">beverages</option>
+                    <option value="condiments/sauces">condiments/sauces</option>
+                </select><br><br>
+                <button id="sort-button" onclick="sort()">Sort</button>
+                <button id="addItemButton" class="add-item-button" onclick="showAddItemPopup()">Add an Item</button>
+            </div>
+            <div id="scroll">
+                <table id="inventory-list">
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup" class="hidden">
+        <div class="popup-content">
+            <h2>Input Information Below</h2>
+            <input type="text" id="item-name" placeholder="enter item name..."><br>
+            <input type="number" id="amt" min="1" placeholder="enter amt...">
+            <select id="unit">
+                <option value="" disabled selected>choose unit of measurement...</option>
+                <option value="pc(s)">pc(s)</option>
+                <option value="bag(s)">bag(s)</option>
+                <option value="can(s)">can(s)</option>
+                <option value="carton">carton</option>
+                <option value="dozen">dozen</option>
+                <option value="kg">kg</option>
+                <option value="lb(s)">lb(s)</option>
+                <option value="g">g</option>
+                <option value="L">L</option>
+                <option value="mL">mL</option>
+            </select><br>
+            <select id="tag-name">
+                <option value="" disabled selected>choose tag name</option>
+                <option value="fruits">fruits</option>
+                <option value="vegetables">vegetables</option>
+                <option value="grains">grains</option> 
+                <option value="meat">meat</option>
+                <option value="poultry">poultry</option>
+                <option value="seafood">seafood</option>
+                <option value="nuts/seeds">nuts/seeds</option>
+                <option value="dairy">dairy</option>
+                <option value="herbs/spices">herbs/spices</option>
+                <option value="beverages">beverages</option>
+                <option value="condiments/sauces">condiments/sauces</option>
+            </select><br><br>
+            <button onclick="addInventoryItem()" class="popUpButtons" id="addItem">Add Item</button>
+            <button onclick="closePopup()" class="popUpButtons" id="cancel">Cancel</button>
+        </div>
+        
+        <div id="keyboard">
+            <img src="keyboard/keyboard.jpeg" alt="keyboard">
+        </div>
+    </div>
+
+    <div id="footerBackground">
+        <footer>
+            <a href="inventory.html" id="inventoryIcon"><img src="icons/inventoryIcon.png" alt="inventoryIcon"></a>
+            <a href="recipes.html" id="recipesIcon"><img src="icons/recipesIcon.png" alt="recipesIcon"></a>
+            <a href="shopping.html" id="shoppingIcon"><img src="icons/shoppingIcon.png" alt="shoppingIcon"></a>
+            <a href="profile.html" id="profileIcon"><img src="icons/profileIcon.png" alt="profileIcon"></a>
+        </footer>
+    </div>
+</body>
+
+</html>
