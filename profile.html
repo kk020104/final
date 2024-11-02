@@ -5,24 +5,126 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inventoryStyle.css" type="text/css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="profileStyle.css" type="text/css">
+    <script src="profileScript.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Profile</title>
 </head>
 
 <body>
+    <header>
+        <strong id="titleStyle">USER PROFILE</strong><br>
+    </header>
 
-    <div id="table">
+    <main>
+        <section class="profile-section">
+            <center>
+                <button data-modal-target="#profileModal">
+                    <img src="https://via.placeholder.com/150" alt="User Profile Picture" width="50" height="50" id="profileImage">
+                </button>
+                <br><br>
+                <input type="file" id="uploadImage" accept="image/*" class="picture hidden">
+                <h2>
+                    <label class="profile-labels">Username:</label>
+                    <span id="usernameDisplay" class="profile-labels">No information entered</span>
+                    <input type="text" id="usernameInput" placeholder="Enter Username" class="answerBox hidden">
+                    <br>
+                    <label class="profile-labels">Email:</label>
+                    <span id="emailDisplay" class="profile-labels">No information entered</span>
+                    <input type="email" id="emailInput" placeholder="Enter Email" class="answerBox hidden"">
+                </h2>
+            </center>
+        </section>
+
+        <section class="preferences-section">
+            <h2 class="section-header-diet">Dietary Preferences & Restrictions:</h2>
+            <div>
+                <label for="diet" class="labels"><strong>Diet Type:</strong></label>
+                <span id="dietDisplay" class="labels">No information entered</span>
+                <select id="diet" class="diet-type-box hidden">
+                    <option value="None">None</option>
+                    <option value="Gluten-free">Gluten-Free</option>
+                    <option value="Halal">Halal</option>
+                    <option value="Keto">Keto</option>
+                    <option value="Kosher">Kosher</option>
+                    <option value="Paleo">Paleo</option>
+                    <option value="Pescatarian">Pescatarian</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                </select>
+            </div>
+            <div>
+                <label for="allergies" class="labels"><strong>Allergies:</strong></label>
+                <span id="allergiesDisplay" class="labels">No information entered</span>
+                <input type="text" id="allergies" placeholder="Ex: Peanuts, Shellfish, etc. " class="answerBox hidden">
+            </div>
+            <div>
+                <label for="favoriteCuisines" class="labels"><strong>Favorite Cuisines:</strong></label>
+                <span id="favoriteCuisinesDisplay" class="labels">No information entered</span>
+                <input type="text" id="favoriteCuisines" placeholder="Ex: Italian, Mexican, etc." class="answerBox hidden">
+            </div>
+            <div>
+                <label for="dislikedIngredients" class="labels"><strong>Disliked Ingredients:</strong></label>
+                <span id="dislikedIngredientsDisplay" class="labels">No information entered</span>
+                <input type="text" id="dislikedIngredients" name="dislikedIngredients" placeholder="E.g., Cilantro, Onion" class="answerBox hidden">
+            </div>
+            <div>
+                <label for="meal" class="labels"><strong>Meal Preference:</strong></label>
+                <span id="mealPrefDisplay" class="labels">No information entered</span>
+                <div id="meal" class="hidden">
+                    <input type="checkbox" id="breakfast" name="mealPreference" value="breakfast">
+                    <label for="breakfast" class="labels">Breakfast</label>
+                    <input type="checkbox" id="lunch" name="mealPreference" value="lunch">
+                    <label for="lunch" class="labels">Lunch</label>
+                    <input type="checkbox" id="dinner" name="mealPreference" value="dinner">
+                    <label for="dinner" class="labels">Dinner</label>
+                    <input type="checkbox" id="snacks" name="mealPreference" value="snacks">
+                    <label for="snacks" class="labels">Snacks</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="additional-info-section">
+            <h2 class="section-header-additional">Additional Information:</h2>
+
+            <div>
+                <label for="skill" class="labels"><strong>Cooking Skill:</strong></label>
+                <span id="cookingSkillDisplay" class="labels">No information entered</span>
+                <select id="skill" class="skill-level-box hidden">
+                    <option value="None">None</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="kitchenTools" class="labels"><strong>Available Kitchen Tools:</strong></label>
+                <span id="kitchenToolsDisplay" class="labels">No information entered</span>
+                <input type="text" id="kitchenTools" placeholder="Ex: Blender, Air Fryer, etc. " class="answerBox hidden">
+            </div>
+        </section>
+        <br>
+        <button id="editButton" class="saveButton">Edit</button>
+    </main>
+
+    <div class="modal" id="infoModal">
+        <div>Saved Information</div>
+        <div id="savedInfo"></div>
+        <button onclick="closeModal()">Close</button>
     </div>
-    
-    <footer>
-        <a href="home.html" id="homeIcon"><img src="../icons/homeIcon.png" width="105" height="118" alt="homeIcon"></a>
-        <a href="inventory.html" id="inventoryIcon"><img src="../icons/inventoryIcon.png" width="105" height="118" alt="inventoryIcon"></a>
-        <a href="recipes.html" id="recipesIcon"><img src="../icons/recipesIcon.png" width="105" height="118" alt="recipesIcon"></a>
-        <a href="shopping.html" id="shoppingIcon"><img src="../icons/shoppingIcon.png" width="105" height="118" alt="shoppingIcon"></a>
-        <a href="profile.html" id="profileIcon"><img src="../icons/profileIcon.png" width="105" height="118" alt="profileIcon"></a>
-    </footer>
+    <div id="overlay" onclick="closeModal()"></div>
+
+    <div id="footerBackground">
+        <footer>
+            <a href="inventory.html" id="inventoryIcon"><img src="icons/inventoryIcon.png" alt="inventoryIcon"></a>
+            <a href="recipes.html" id="recipesIcon"><img src="icons/recipesIcon.png" alt="recipesIcon"></a>
+            <a href="shopping.html" id="shoppingIcon"><img src="icons/shoppingIcon.png" alt="shoppingIcon"></a>
+            <a href="profile.html" id="profileIcon"><img src="icons/profileIcon.png" alt="profileIcon"></a>
+        </footer>
+    </div>
 </body>
 
 </html>
