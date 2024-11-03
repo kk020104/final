@@ -71,9 +71,8 @@ function addRecipe() {
     const tags = document.getElementById("recipeTags").value.split(',').map(tag => tag.trim());
     const imageUrl = document.getElementById("recipeImage").value || "food/default.jpg"; // Adjust path if needed
 
-    // Create the new recipe column and content structure
     const column = document.createElement("div");
-    column.className = "column"; // Use the same class as hardcoded recipes
+    column.className = "column"; 
 
     const content = document.createElement("div");
     content.className = "content";
@@ -92,7 +91,6 @@ function addRecipe() {
     
     document.querySelector(".row").prepend(column);
 
-    // Create and add the popup for the new recipe
     const popup = document.createElement("div");
     popup.id = `popup${name.replace(/\s+/g, '')}`;
     popup.className = "popup";
@@ -110,48 +108,10 @@ function addRecipe() {
 
     document.body.appendChild(popup);
 
-    // Hide the form and reset it
     hideRecipeForm();
     document.getElementById("recipeForm").reset();
 }
 
-function addRecipe() {
-    const name = document.getElementById("recipeName").value;
-    const ingredients = document.getElementById("recipeIngredients").value;
-    const instructions = document.getElementById("recipeInstructions").value;
-    const tags = document.getElementById("recipeTags").value.split(',').map(tag => tag.trim());
-
-    const imageFile = document.getElementById("recipeImage").files[0];
-    const reader = new FileReader();
-
-    reader.onload = function (e) {
-        const imageUrl = e.target.result;
-
-        const newRecipe = {
-            name: name,
-            ingredients: ingredients,
-            instructions: instructions,
-            tags: tags,
-            imageUrl: imageUrl
-        };
-
-        // Save to localStorage
-        let recipes = JSON.parse(localStorage.getItem("recipes")) || [];
-        recipes.push(newRecipe);
-        localStorage.setItem("recipes", JSON.stringify(recipes));
-
-        // Display the recipe in the UI
-        displayRecipe(newRecipe);
-        hideRecipeForm();
-        document.getElementById("recipeForm").reset();
-    };
-
-    if (imageFile) {
-        reader.readAsDataURL(imageFile);
-    }
-}
-
-// Helper function to display a recipe in the UI
 function displayRecipe(recipe) {
     const column = document.createElement("div");
     column.className = "column";
