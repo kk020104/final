@@ -12,7 +12,6 @@
 
     <title>Profile</title>
 </head>
-
 <body>
     <header>
         <strong id="titleStyle">USER PROFILE</strong><br>
@@ -44,6 +43,7 @@
                 <label for="diet" class="labels"><strong>Diet Type:</strong></label>
                 <span id="dietDisplay" class="labels">No information entered</span>
                 <select id="diet" class="diet-type-box hidden">
+                    <option value="" disabled selected>Select a Diet Type</option>
                     <option value="None">None</option>
                     <option value="Gluten-free">Gluten-Free</option>
                     <option value="Halal">Halal</option>
@@ -68,7 +68,7 @@
             <div>
                 <label for="dislikedIngredients" class="labels"><strong>Disliked Ingredients:</strong></label>
                 <span id="dislikedIngredientsDisplay" class="labels">No information entered</span>
-                <input type="text" id="dislikedIngredients" name="dislikedIngredients" placeholder="E.g., Cilantro, Onion" class="answerBox hidden">
+                <input type="text" id="dislikedIngredients" name="dislikedIngredients" placeholder="E.g., Cilantro, Onion, etc." class="answerBox hidden">
             </div>
             <div>
                 <label for="meal" class="labels"><strong>Meal Preference:</strong></label>
@@ -93,7 +93,7 @@
                 <label for="skill" class="labels"><strong>Cooking Skill:</strong></label>
                 <span id="cookingSkillDisplay" class="labels">No information entered</span>
                 <select id="skill" class="skill-level-box hidden">
-                    <option value="None">None</option>
+                    <option value="" disabled selected>Select a Cooking Skill</option>
                     <option value="Beginner">Beginner</option>
                     <option value="Intermediate">Intermediate</option>
                     <option value="Advanced">Advanced</option>
@@ -124,7 +124,6 @@
             <a href="shopping.html" id="shoppingIcon"><img src="icons/shoppingIcon.png" alt="shoppingIcon"></a>
             <a href="profile.html" id="profileIcon"><img src="icons/profileIcon.png" alt="profileIcon"></a>
         </footer>
-    </div>
+    </div>  
 </body>
-
 </html>
