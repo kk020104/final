@@ -1,139 +1,140 @@
 
-        header {
-            text-align: center;
-        }
+header {
+    text-align: center;
+}
 
-        #titleStyle {
-            font-size: 75px;
-            font-family: 'Fuzzy Bubbles';
-        }
+#titleStyle {
+    font-size: 75px;
+    font-family: 'Fuzzy Bubbles';
+}
 
-        html {
-            position: relative;
-            background-color: white;
-        }
+html {
+    position: relative;
+    background-color: white;
+}
 
-        body {
-            background-color: rgb(253, 240, 224);
-            width: 640px;
-            height: 960px;
-            border-radius: 15px;
-            border: 0.5rem solid black;
-            padding: 10px;
-            transition: background-color 0.3s;
-        }
+body {
+    background-color: rgb(253, 240, 224);
+    width: 640px;
+    height: 960px;
+    border-radius: 15px;
+    border: 0.5rem solid black;
+    padding-right: 10px;
+    padding-left: 10px;
+    transition: background-color 0.3s;
+}
 
-        .edit-mode {
-            background-color:  rgb(186, 218, 241);
-        }
+.edit-mode {
+    background-color:  rgb(186, 218, 241);
+}
 
-        .edit-mode #footerBackground {
-            background-color:   rgb(186, 218, 241);
-        }
+.edit-mode #footerBackground {
+    background-color:   rgb(186, 218, 241);
+}
 
-        .hidden {
-            display: none;
-        }
+.hidden {
+    display: none;
+}
 
-        .picture{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 20px;
-        }
+.picture{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
 
-        .saveButton {
-            font-size: 30px;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            background-color: rgb(225, 234, 239);
-            border: 0.01rem solid rgb(165, 120, 94);
-            border-radius: 10px;
-            cursor: pointer;
-            padding:10px;
-        }
+.saveButton {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(225, 234, 239);
+    border: 0.01rem solid rgb(165, 120, 94);
+    border-radius: 10px;
+    cursor: pointer;
+    padding:10px;
+}
 
-        .answerBox, .diet-type-box, .skill-level-box {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 20px;
-            width: 230px;
-            margin-bottom: 5px;
-        }
+.answerBox, .diet-type-box, .skill-level-box {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    width: 230px;
+    margin-bottom: 5px;
+}
 
-        .section-header-diet{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 30px;
-            background-color: rgb(186, 218, 241);
-            width: 500px;
-            border-radius: 10px;
-        }
+.section-header-diet{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    background-color: rgb(186, 218, 241);
+    width: 500px;
+    border-radius: 10px;
+}
 
-        .section-header-additional{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 30px;
-            background-color: rgb(186, 218, 241);
-            width: 340px;
-            border-radius: 10px;
-        }
+.section-header-additional{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    background-color: rgb(186, 218, 241);
+    width: 340px;
+    border-radius: 10px;
+}
 
-        .modal {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            display: none;
-            width: 80%;
-            max-width: 500px;
-            font-size: 20px;
-        }
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    width: 80%;
+    max-width: 500px;
+    font-size: 20px;
+}
 
-        .labels{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 25px;
-        }
-        
-        .profile-labels{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 25px;
-        }
+.labels{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
 
-        #meal{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 20px;
-        }
+.profile-labels{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
 
-        input[type=checkbox] {
-            width: 20px;
-            height: 20px;
-        }
+#meal{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
 
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            display: none;
-        }
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
 
-        #footerBackground {
-            width: 655px;
-            height: 100px;
-            text-align: center;
-            background-color: rgb(241, 226, 207);
-            position: absolute;
-            bottom: 18px;
-            left: 18px;
-        }
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
 
-        img {
-            width: 100px;
-            height: 94px;
-            margin-top: 5px;
-            margin-left: 30px;
-            margin-right: 30px;
-        }
+#footerBackground {
+    width: 655px;
+    height: 100px;
+    text-align: center;
+    background-color: rgb(241, 226, 207);
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+}
+
+img {
+    width: 100px;
+    height: 94px;
+    margin-top: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
